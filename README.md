@@ -22,11 +22,11 @@ Imagine that you are the librarian of OOP University, and you need a tool to rec
 
 ## Authors
 
-👤 **Fadhunsi seyi**
+👤 **Fadahunsi seyi**
 
-- [GitHub](https://github.com/Fadahunsiseyi)
-- [Twitter](https://twitter.com/@Fadahunsiseyi_)
-- [LinkedIn](https://www.linkedin.com/in/fadahunsi-seyi-samuel-49191a209/)
+- GitHub: [Fadahunsiseyi](https://github.com/Fadahunsiseyi)
+- Twitter: [Fadahunsiseyi_](https://twitter.com/@Fadahunsiseyi_)
+- LinkedIn: [fadahunsi-seyi-samuel](https://www.linkedin.com/in/fadahunsi-seyi-samuel-49191a209/)
 
 ## 🤝 Contributing
 
