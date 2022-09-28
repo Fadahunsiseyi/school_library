@@ -1,3 +1,3 @@
-require_relative './person'
-class Decorator
+require_relative './nameable'
+class Decorator < Nameable
 end
