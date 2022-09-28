@@ -22,7 +22,7 @@ class TrimmerDecorator < Decorator
     if word_output.length <= 10
       word_output
     else
-      word_output[0..10]
+      word_output[0..9]
     end
   end
 end
