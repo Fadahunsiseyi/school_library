@@ -10,4 +10,3 @@ def main(app = App.new)
 
   main(app) unless input == 7
 end
-
