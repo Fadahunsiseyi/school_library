@@ -47,5 +47,57 @@ class App
     end
   end
 
+  def create_a_person
+    answer = person_choice
+    print 'Age: '
+    age = gets.chomp
+    print 'Name: '
+    name = gets.chomp
+
+    case answer
+    when 1
+      parent_permission = parent_permission?
+      @people << Student.new(age, name, parent_permission)
+    when 2
+      print 'Specialization: '
+      specialization = gets.chomp
+      @people << Teacher.new(specialization, age, name)
+    end
+    puts 'Person created successfully'
+  end
+
+  def create_a_book
+    print 'Title: '
+    title = gets.chomp
+
+    print 'Author: '
+    author = gets.chomp
+
+    @books << Book.new(title, author)
+
+    puts 'Book created successfully'
+  end
+
+  def create_a_rental
+    puts 'Select a book from the following list by number'
+    @books.each_with_index { |b, i| puts "#{i}) Title: #{b.title}, Author: #{b.author}" }
+    index = gets.to_i
+    book = @books[index]
+
+    puts 'Select a person from the following list by number (not id)'
+    @people.each_with_index { |p, i| puts "#{i}) [#{p.class}] Name: #{p.name}, ID: #{p.id}, Age: #{p.age}" }
+    index = gets.to_i
+    person = @people[index]
+
+    print 'Date: '
+    date = gets.chomp
+
+    rental = Rental.new(date, book, person)
+    rental.add_book(book, person)
+    @rentals << rental
+
+    puts 'Rental created successfully'
+  end
+
  
 end
