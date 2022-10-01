@@ -99,5 +99,48 @@ class App
     puts 'Rental created successfully'
   end
 
- 
+  def list_all_rentals_for_a_given_person_id
+    print 'ID of person: '
+    id = gets.chomp.to_i
+
+    person = @people.select { |p| p.id == id }
+
+    puts 'Rentals:'
+    person[0].rentals.each do |r|
+      puts "Date: #{r.date}, Book #{r.book.title} by #{r.book.author}"
+    end
+  end
+
+  def query_method
+    puts "Please choose an option by entering a number: \n
+    1 - List all books \n
+    2 - List all people \n
+    3 - Create a person \n
+    4 - Create a book \n
+    5 - Create a rental \n
+    6 - List all rentals for a given person id \n
+    7 - exit "
+    gets.to_i
+  end
+
+  def return_method(input)
+    case input
+    when 1
+      list_all_books
+    when 2
+      list_all_people
+    when 3
+      create_a_person
+    when 4
+      create_a_book
+    when 5
+      create_a_rental
+    when 6
+      list_all_rentals_for_a_given_person_id
+    end
+  end
+
+  def return_error
+    puts 'Please enter a valid input'
+  end
 end
