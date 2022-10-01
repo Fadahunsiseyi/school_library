@@ -36,5 +36,16 @@ class App
     parent_permission
   end
 
+  def person_choice
+    print 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
+    answer = gets.chomp.to_i
+    if [1, 2].include?(answer)
+      answer
+    else
+      puts 'Please enter a valid value (1 or 2)'
+      person_choice
+    end
+  end
+
  
 end
